@@ -1,25 +1,25 @@
 <!doctype html>
 <html lang="fr">
-<head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Tableau d'instruments</title>
-    <link rel="icon" href="/assets/images/favicon.png">
-    <link rel="stylesheet" href="/assets/css/styles.css">
-</head>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Tableau d'instruments</title>
+		<link rel="icon" href="/assets/images/favicon.png">
+		<link rel="stylesheet" href="/assets/css/styles.css">
+	</head>
 
-<body>
+	<body>
 
-   <table>
-        {% for row in products |batch(3, 'no item') %}
-            <tr>
-            {% for column in row %}
-                <td>{{column}}</td>
-              {%endfor%}
-            </tr>
-            {%endfor%}
-         {{dump(product)}}
-    </table>
-      
-</body>
+		<table>
+			{% for row in products |batch(3, 'no item') %}
+				<tr>
+					{% for column in row %}
+						<td>{{column}}</td>
+						{%endfor%}
+					</tr>
+					{%endfor%}{{dump(product)}}
+				</tr>
+			</table>
+		</body>
+	</body>
 </html>
